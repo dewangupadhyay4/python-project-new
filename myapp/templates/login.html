@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <h2>Login</h2>
+    <form method="post">
+        {% csrf_token %}
+        <p>
+            <label for="username">Username:</label>
+            <input type="text" name="username" required id="username">
+        </p>
+        <p>
+            <label for="password">Password:</label>
+            <input type="password" name="password" required id="password">
+        </p>
+        <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="{% url 'signup' %}">Sign up here</a></p>
+</body>
+</html>
